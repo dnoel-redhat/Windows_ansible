@@ -1,0 +1,7 @@
+- name: configure ssh
+  hosts: windows
+  
+
+  roles:
+    - win_service_config
+ 

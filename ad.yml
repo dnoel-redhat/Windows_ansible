@@ -1,0 +1,7 @@
+- name: install AD
+  hosts: windows
+#  vars:
+#   GUID: d2b4
+
+  roles:
+    - win_ad_install 

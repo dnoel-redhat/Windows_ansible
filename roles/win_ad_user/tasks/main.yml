@@ -1,0 +1,20 @@
+---
+# name: print info
+# debug:
+#   var: "{{ user_info }}"
+
+# name: call foo
+# debug:
+#   var: "{{ foo }}"
+
+# tasks file for win_ad_user_info
+- name: Install AD Users
+  win_domain_user:
+    name: "{{ item.name }}"
+    firstname: "{{ item.firstname }}"
+    surname: "{{ item.surname }}"
+    password: "{{ item.password }}"
+    state: present
+  loop: 
+    "{{ user_info }}"
+
